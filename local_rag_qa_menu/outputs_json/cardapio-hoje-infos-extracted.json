@@ -1,0 +1,144 @@
+[
+  {
+    "item_name": "Tradicional",
+    "price_P": 45.0,
+    "price_M": 45.0,
+    "price_G": 55.0,
+    "description": "Queijo, presunto, tomate, azeitona preta"
+  },
+  {
+    "item_name": "SMASH BURGER",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": "Hamburger Bevin Pao Especial, Sabskcha, Guaje, Batata Falke"
+  },
+  {
+    "item_name": "Calabresa",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": "Queija, Mahe Eszecial e Maths Especial"
+  },
+  {
+    "item_name": "TOP BURGER",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": "Hamburger Bevino, Que ja Pao Especial, Salsicha, Qurija"
+  },
+  {
+    "item_name": "Portuguesa",
+    "price_P": 45.0,
+    "price_M": 45.0,
+    "price_G": 55.0,
+    "description": "Queijo presunto, tomate, azeitona preta"
+  },
+  {
+    "item_name": "CHICKEN BURGER",
+    "price_P": 45.0,
+    "price_M": 45.0,
+    "price_G": 55.0,
+    "description": "Frango com requeijao, Queijo, presunto, tomate, azeitona preta"
+  },
+  {
+    "item_name": "VEGANO BURGER",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": "Pao Especial, Hambdrger Vegetal Quai"
+  },
+  {
+    "item_name": "Camardao",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": "Queijo, presunto, tomate, azeitona preta"
+  },
+  {
+    "item_name": "MONSTRO BURGER",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": "2 Hamburger de Picatha"
+  },
+  {
+    "item_name": "Pizza a moda da casa",
+    "price_P": 45.0,
+    "price_M": 45.0,
+    "price_G": 55.0,
+    "description": "Queijo, presunto, tomate, azeitona preta"
+  },
+  {
+    "item_name": "Refrigerante",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 5.5
+  },
+  {
+    "item_name": "Aqua Mineral",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 5.0
+  },
+  {
+    "item_name": "Cerveja Lata",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 6.0
+  },
+  {
+    "item_name": "Chopp de Vinho",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 10.0
+  },
+  {
+    "item_name": "Sorvete",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 18.0
+  },
+  {
+    "item_name": "Petit Gateau",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 19.0
+  },
+  {
+    "item_name": "Brigadeiro",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 13.0
+  },
+  {
+    "item_name": "Torta holandesa",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 10.0
+  },
+  {
+    "item_name": "AGUA",
+    "price_P": null,
+    "price_M": null,
+    "price_G": null,
+    "description": null,
+    "price": 3.0
+  }
+]
