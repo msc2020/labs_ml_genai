@@ -1,6 +1,6 @@
 # Labs
 
-## Análise da influência de argumentos persuasivos sobre um LLM compacto
+## Análise da influência de argumentos persuasivos sobre um LLM
 
 No trabalho ["Measuring the Persuasiveness of Language Models"](https://www.anthropic.com/news/measuring-model-persuasiveness) é estudado como argumentos persuasivos gerados por LLM podem  avaliações feitas por pessoas.
 
@@ -10,7 +10,7 @@ Motivado por este estudo, cujo dataset é disponibilizado na Hugging Face ([`Ant
 
 Será que um modelo de LLM muda sua avaliação inicial de uma alegação, após levar em conta argumentos persuasivos em seu contexto?
 
-<img src="./llm_on_persuasive_arguments/imgs/rating_changes_graph_human.png">
+<img src="./llm_persuasive_arguments/imgs/rating_changes_graph_human.png">
 
 ### Conteúdo
 
@@ -49,14 +49,14 @@ Será que um modelo de LLM muda sua avaliação inicial de uma alegação, após
 - Gera gráficos para análise dos resultados
 
 ### Notebooks
-- [prepare_dataset](./llm_on_persuasive_arguments/01.prepare_dataset.ipynb)
-- [initial_tests_eval](./llm_on_persuasive_arguments/02.initial_tests_eval.ipynb)
-- [eval_sample_dataset](./llm_on_persuasive_arguments/03.eval_sample_dataset.ipynb)
-- [eval_input_dataset](./llm_on_persuasive_arguments/04.eval_input_dataset.ipynb)
+- [prepare_dataset](./llm_persuasive_arguments/01.prepare_dataset.ipynb)
+- [initial_tests_eval](./llm_persuasive_arguments/02.initial_tests_eval.ipynb)
+- [eval_sample_dataset](./llm_persuasive_arguments/03.eval_sample_dataset.ipynb)
+- [eval_input_dataset](./llm_persuasive_arguments/04.eval_input_dataset.ipynb)
 
 <br/>
 
-<img src="./llm_on_persuasive_arguments/imgs/std_persuasiveness_metric.gif">
+<img src="./llm_persuasive_arguments/imgs/std_persuasiveness_metric.gif">
 
 <br/>
 
