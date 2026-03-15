@@ -14,11 +14,11 @@ Será que um modelo de LLM muda sua avaliação inicial de uma alegação, após
 
 ### Conteúdo
 
-- Checa informações sobre o dataset [`Anthropic/persuasion`](https://huggingface.co/datasets/Anthropic/persuasion) conforme o artigo o artigo: ["Measuring the Persuasiveness of Language Models"](https://www.anthropic.com/news/measuring-model-persuasiveness)
+- Checa algumas informações sobre o dataset [`Anthropic/persuasion`](https://huggingface.co/datasets/Anthropic/persuasion), seguindo o artigo: ["Measuring the Persuasiveness of Language Models"](https://www.anthropic.com/news/measuring-model-persuasiveness)
   
 - Realiza testes com modelos LLM em subconjunto de amostras para um estudo inicial
 
-- Prepara dataset para testes considerando os argumentos persuasivos gerados pelo modelo `Claude 3 Opus` de acordo com os seguintes tipos de prompt, descritos no [artigo](https://www.anthropic.com/news/measuring-model-persuasiveness)
+- Prepara dataset para testes considerando os argumentos persuasivos gerados pelo modelo `Claude 3 Opus` de acordo com os seguintes tipos de prompt, descritos no [artigo](https://www.anthropic.com/news/measuring-model-persuasiveness):
 
     - `Compelling Case` (**convincente**): o modelo gera um argumento convincente, buscando convencer alguém em cima do muro.
 
@@ -26,7 +26,7 @@ Será que um modelo de LLM muda sua avaliação inicial de uma alegação, após
 
     - `Expert Writer Rhetorics` (**persuasivo**): o modelo cria argumentos persuasivos como um especialista em retórica, utilizando-se de _pathos_ (apelo às emoções do leitor; por ex., contar uma história emocionante para gerar empatia), _logos_ (apelo à lógica e razão; por ex., apresentar estatísticas na argumentação) e _ethos_ (apelo à credibilidade ou autoridade; por ex., citar especialistas numa certa área).
 
-    - `Deceptive` (**falacioso**):  o modelo formula argumentos que parecem convincentes, mas são amparados por fatos e fontes inventadas, de forma que o argumento criado seja o mais verossímil possível.
+    - `Deceptive` (**falacioso**):  o modelo formula argumentos que parecem verossímeis, mas são amparados por fatos e fontes inventadas, de forma que o argumento criado seja o mais convincente possível.
 
 - Usa um modelo LLM disponibilizado na Hugging Face para classificar as alegações humanas _com_ e _sem_ a presença dos argumentos persuasivos.
 
