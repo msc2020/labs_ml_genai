@@ -1,14 +1,78 @@
 # Labs
 
+## Análise da influência de argumentos persuasivos sobre um LLM compacto
+
+No trabalho ["Measuring the Persuasiveness of Language Models"](https://www.anthropic.com/news/measuring-model-persuasiveness) é estudado como argumentos persuasivos gerados por LLM podem  avaliações feitas por pessoas.
+
+Em um primeiro momento, os participantes do estudos precisam avaliar uma alegação em uma escala Likert de 1 a 7 (`rating_initial`). Após essa avaliação, é pedido que novamente as pessoas façam uma avaliação (`rating_final`), agora levando em conta um argumento gerado por modelos LLM (compactos e de fronteira). Os autores consideram uma forma simples de medir o efeito persuasivo deste argumento na resposta, utilizando a seguinte métrica: `persuasiveness_metric = rating_final - rating_initial`.
+
+Motivado por este estudo, cujo dataset é disponibilizado na Huggin Face ([`Anthropic/persuasion`](https://huggingface.co/datasets/Anthropic/persuasion)), realizamos testes para checar o efeito dos argumentos persuasivos na avaliação feita por um modelo de LLM de alegações disponibilizadas nesta base de dados.
+
+Será que um modelo de LLM muda sua avaliação inicial de uma alegação, após levar em conta argumentos persuasivos em seu contexto?
+
+<img src="./llm_on_persuasive_arguments/imgs/rating_changes_graph_human.png">
+
+### Conteúdo
+
+- Checa informações sobre o dataset [`Anthropic/persuasion`](https://huggingface.co/datasets/Anthropic/persuasion) conforme o artigo o artigo: ["Measuring the Persuasiveness of Language Models"](https://www.anthropic.com/news/measuring-model-persuasiveness)
+  
+- Realiza testes com modelos LLM em subconjunto de amostras para um estudo inicial
+
+- Prepara dataset para testes considerando os argumentos persuasivos gerados pelo modelo `Claude 3 Opus` de acordo com os seguintes tipos de prompt, descritos no [artigo](https://www.anthropic.com/news/measuring-model-persuasiveness)
+
+    - `Compelling Case` (**convincente**): o modelo gera um argumento convincente, buscando convencer alguém em cima do muro.
+
+    - `Logical Reasoning` (**lógico**): o modelo elabora argumentos usando raciocínio lógico, tentando trazer clareza e transparência nos seus argumentos.
+
+    - `Expert Writer Rhetorics` (**persuasivo**): o modelo cria argumentos persuasivos como um especialista em retórica, utilizando-se de _pathos_ (apelo às emoções do leitor; por ex., contar uma história emocionante para gerar empatia), _logos_ (apelo à lógica e razão; por ex., apresentar estatísticas na argumentação) e _ethos_ (apelo à credibilidade ou autoridade; por ex., citar especialistas numa certa área).
+
+    - `Deceptive` (**falacioso**):  o modelo formula argumentos que parecem convincentes, mas são amparados por fatos e fontes inventadas, de forma que o argumento criado seja o mais verossímil possível.
+
+- Usa um modelo LLM disponibilizado na Hugging Face para classificar as alegações humanas _com_ e _sem_ a presença dos argumentos persuasivos.
+
+- Usar a estrutura do [artigo](https://www.anthropic.com/news/measuring-model-persuasiveness) para classificação das alegações feitas pelo `modelo LLM de testes`:
+
+  - `1 - Strongly oppose`
+
+  - `2 - Oppose`
+
+  - `3 - Somewhat oppose`
+
+  - `4 - Neither oppose nor support`
+
+  - `5 - Somewhat support`
+
+  - `6 - Support`
+
+  - `7 - Strongly support`
+  
+- Gera gráficos para análise dos resultados
+
+### Notebooks
+- [prepare_dataset](./llm_on_persuasive_arguments/01.prepare_dataset.ipynb)
+- [initial_tests_eval](./llm_on_persuasive_arguments/02.initial_tests_eval.ipynb)
+- [eval_sample_dataset](./llm_on_persuasive_arguments/03.eval_sample_dataset.ipynb)
+- [eval_input_dataset](./llm_on_persuasive_arguments/04.eval_input_dataset.ipynb)
+
+<br/>
+
+<img src="./llm_on_persuasive_arguments/imgs/std_persuasiveness_metric.gif">
+
+<br/>
+
+---
+
+<br/>
+
 ## Modelagem com auto ML e LLM para predição de sucesso em campanha de telemarketing
 
+### Objetivo
 
+Classificar se um cliente irá (ou não) realizar um depósito, levando em conta informações de campanhas de marketing via telefone.
 
-- **Objetivo:** Classificar se um cliente irá (ou não) realizar um depósito, levando em conta informações de campanhas de marketing via telefone.
+<img src="./pred_telemarketing_success/imgs/metrics_llm.png" size="70%">
 
-<img src="pred_telemarketing_success/imgs/metrics_llm.png" size="70%">
-
-- **Conteúdo:**
+### Conteúdo
 
   - Uso de auto ML para análise exploratória (EDA) e treinamento de modelos de machine learning.
   
@@ -20,68 +84,74 @@
 
   - Uso de LLM para explicar os resultados obtidos.
   
-- **Dataset:** [Bank Marketing (UCI)](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+### Dataset
+[Bank Marketing (UCI)](https://archive.ics.uci.edu/dataset/222/bank+marketing)
 
-- **Notebook:**
-  - [pred_telemarketing_product_acquisition_success](pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
+### Notebook
+[pred_telemarketing_product_acquisition_success](pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
   
+
+---
 
 <br/>
 
+
+
 ## Multi-agentes de IA para análises de revisões de papers
 
-A partir de uma [base de reviews de artigos (UCI)](https://archive.ics.uci.edu/dataset/410/paper+reviews) e Langchain, criamos uma chain com três agentes para analisar questões sobre um tema escolhidos por um usuário. A partir deste input, o mini sistema de multi-agentes busca esclarecer a questão/tópico questionado: um deles responde as questões de forma generalista; outro busca responder usando o contexto do dataset disponibilizado (RAG); e outro realiza uma busca por vídeos no Youtube sobre o tema de interesse para complementar a resposta.
+A partir de uma [base de reviews de artigos (UCI)](https://archive.ics.uci.edu/dataset/410/paper+reviews) e Langchain, criamos uma chain com três agentes para analisar questões sobre um tema escolhido por um usuário. A partir deste input, o mini sistema de multi-agentes busca esclarecer a questão/tópico questionado: um deles responde as questões de forma generalista; outro busca responder usando o contexto do dataset disponibilizado (RAG); e outro realiza uma busca de vídeos no Youtube para complementar a resposta.
 
 <img src="./analyse_reviews_multi_agents/imgs/multi_agents_paper_reviews.png" size="60%">
 
 
-- **Conteúdo:**
+### Conteúdo
 
-  - Criação de vector store (FAISS) a partir de embbedings calculados com modelo disponibilizado na Hugging Face.
+- Criação de vector store (FAISS) a partir de embbedings calculados com um modelo disponibilizado na Hugging Face.
 
-  - Buscas por similaridade e prompts com retrievers.
+- Buscas por similaridade e prompts com retrievers.
 
-  - Testes com elementos do Langchain: prompt template, tools, retrievers, chains e runnable parallel.
-  
-  - Implementação de multi-agentes com tools e RAG.
+- Testes com elementos do Langchain: prompt template, tools, retrievers, chains e runnable parallel.
+
+- Implementação de multi-agentes com tools e RAG.
 
 
-- **Notebooks:**
+### Notebooks
 
-  -  [prepare_data](./analyse_reviews_multi_agents/01.prepare-data.ipynb)
+-  [prepare_data](./analyse_reviews_multi_agents/01.prepare-data.ipynb)
 
-  -  [create-paper-review-agent](./analyse_reviews_multi_agents/02.create-paper-review-agent.ipynb)
+-  [create-paper-review-agent](./analyse_reviews_multi_agents/02.create-paper-review-agent.ipynb)
 
+
+
+---
 
 <br/>
 
 ## RAG local para sessão de perguntas e resposta sobre o cardápio de hoje
 
-Neste lab testamos a extração de conteúdo de texto via OCR de uma imagem de cardápio, o parsing com LLM de textos extraído do OCR e criação de uma RAG simples para responder questões sobre o cardápio fornecido.
+Neste lab testamos a extração de conteúdo de texto via OCR de uma imagem de cardápio. Realizamos o parsing do texto OCR com LLM e implementamos uma agente com RAG simples para responder questões sobre o cardápio fornecido.
 
 <img src="./local_rag_qa_menu/imgs/rag_menu.png" size="70%">
 
 
-- **Conteúdo:**
+### Conteúdo
   
-  - Usa OCR (Tesseract) para extrair informações de um cardápio na forma de imagem (PNG).
-  
-  - Realiza o parsing das informações extraídas usando uma LLM.
-  
-  - Exporta as informações estruturadas com CSV e JSON.
+- Usa OCR (Tesseract) para extrair informações de um cardápio na forma de imagem (PNG).
 
-  - Gera embedding a partir de informações estruturadas da imagem do cardápio, usando modelo disponibilizado pela Hugging Face.
+- Realiza o parsing das informações extraídas usando uma LLM.
 
-  - Cria banco vetorial (FAISS) e realiza buscas semânticas.
+- Exporta as informações estruturadas com CSV e JSON.
 
-  - Realiza sessão de perguntas e respostas sobre o cardápio fornecido.
+- Gera embedding a partir de informações da imagem do cardápio estruturadas, usando modelo disponibilizado pela Hugging Face.
 
-- **Notebooks:**
+- Cria banco vetorial (FAISS) e realiza buscas semânticas.
 
-    -  [read_menu](./local_rag_qa_menu/01.read_menu.ipynb)
+- Realiza sessão de perguntas e respostas sobre o cardápio fornecido.
 
-    -  [rag_qa_menu](./local_rag_qa_menu/02.rag_qa_menu.ipynb)
+### Notebooks
+-  [read_menu](./local_rag_qa_menu/01.read_menu.ipynb)
 
+-  [rag_qa_menu](./local_rag_qa_menu/02.rag_qa_menu.ipynb)
 
 
 <br/>
