@@ -6,9 +6,13 @@ No trabalho ["Measuring the Persuasiveness of Language Models"](https://www.anth
 
 Em um primeiro momento, os participantes do estudo precisam avaliar uma alegação em uma escala Likert de 1 a 7 (`rating_initial`). Após essa avaliação, é pedido que novamente as pessoas façam uma avaliação (`rating_final`), agora levando em conta argumentos gerados por modelos LLMs (compactos e de fronteira). Os autores consideram uma forma simples de medir o efeito persuasivo deste argumento na resposta, utilizando a seguinte métrica: `persuasiveness_metric = rating_final - rating_initial`.
 
-Motivado por este estudo, cujo dataset é disponibilizado na Hugging Face ([`Anthropic/persuasion`](https://huggingface.co/datasets/Anthropic/persuasion)), realizamos testes para checar o efeito dos argumentos persuasivos (`argument`) nas avaliações que um modelo de LLM escolhido faz das alegações disponibilizadas na base de dados (`claim`).
+Motivado por este estudo, cujo dataset é disponibilizado na Hugging Face ([`Anthropic/persuasion`](https://huggingface.co/datasets/Anthropic/persuasion)), realizamos testes para checar o efeito dos argumentos persuasivos (`argument`) nas avaliações que um modelo de LLM, escolhido para testes, realiza das alegações (`claim`) disponibilizadas na base de dados.
 
-Será que um modelo de LLM muda sua avaliação inicial de uma alegação, após levar em conta argumentos persuasivos em seu contexto?
+<br />
+
+Será que o modelo de LLM usado nos testes, após levar em conta argumentos persuasivos em seu contexto, muda sua avaliação inicial? Que fatores podem influenciar nessa possível mudança?
+
+<br />
 
 <img src="./llm_persuasive_arguments/imgs/rating_changes_graph_human.png">
 
