@@ -10,7 +10,7 @@ Motivado por este estudo, cujo dataset é disponibilizado na Hugging Face ([`Ant
 
 <br />
 
-Será que o modelo de LLM usado nos testes, após levar em conta argumentos persuasivos em seu contexto, muda sua avaliação inicial? Que fatores podem influenciar nessa possível mudança?
+Será que o modelo LLM usado nos testes, após levar em conta argumentos persuasivos em seu contexto, muda sua avaliação inicial? Que fatores podem influenciar nessa possível mudança?
 
 <br />
 
