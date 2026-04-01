@@ -1,5 +1,45 @@
 # Labs
 
+## Melhorias na modelagem para predição de sucesso em uma campanha de telemarketing
+
+A partir do uso de diferentes técnicas de ML, buscamos melhorar as métricas de performance obtidas para a tarefa de classificar se um cliente realizará um depósito, após um contato de telemarketing. Usamos LLM para analisar os resultados.
+
+<br/>
+
+<img src="./improve_pred_telemarketing_success/imgs/results_explained_llm.png" size="70%">
+
+<br/>
+
+### Conteúdo
+
+- Construção de um modelo baseline utilizando AutoML.
+
+- Feature engineering para criação de novos atributos.
+
+- Uso de PCA para gerar features.
+
+- Comparação entre as métricas de performance do modelo baseline e dos modelos candidatos.
+
+- Explicação dos resultados de performance com ajuda de um LLM.
+
+### Dataset
+[Bank Marketing (UCI)](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+
+### Notebook
+[improve_pred_telemarketing_success.ipynb](./improve_pred_telemarketing_success/improve_pred_telemarketing_success.ipynb)
+
+  
+### Modelagem anterior 
+[Modelagem com auto ML e LLM para predição de sucesso em campanha de telemarketing](https://github.com/msc2020/labs_ml_genai/blob/main/pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
+
+
+<br/>
+
+---
+
+<br/>
+
+
 ## Análise da influência de argumentos persuasivos sobre um LLM
 
 No trabalho ["Measuring the Persuasiveness of Language Models"](https://www.anthropic.com/news/measuring-model-persuasiveness) é estudado como argumentos persuasivos, gerados por LLM, podem afetar as avaliações feitas por pessoas.
@@ -53,10 +93,10 @@ Será que o modelo LLM usado nos testes, após levar em conta argumentos persuas
 - Gera gráficos para análise dos resultados
 
 ### Notebooks
-- [prepare_dataset](./llm_persuasive_arguments/01.prepare_dataset.ipynb)
-- [initial_tests_eval](./llm_persuasive_arguments/02.initial_tests_eval.ipynb)
-- [eval_sample_dataset](./llm_persuasive_arguments/03.eval_sample_dataset.ipynb)
-- [eval_input_dataset](./llm_persuasive_arguments/04.eval_input_dataset.ipynb)
+- [prepare_dataset.ipynb](./llm_persuasive_arguments/01.prepare_dataset.ipynb)
+- [initial_tests_eval.ipynb](./llm_persuasive_arguments/02.initial_tests_eval.ipynb)
+- [eval_sample_dataset.ipynb](./llm_persuasive_arguments/03.eval_sample_dataset.ipynb)
+- [eval_input_dataset.ipynb](./llm_persuasive_arguments/04.eval_input_dataset.ipynb)
 
 <br/>
 
@@ -92,7 +132,7 @@ Classificar se um cliente irá (ou não) realizar um depósito, levando em conta
 [Bank Marketing (UCI)](https://archive.ics.uci.edu/dataset/222/bank+marketing)
 
 ### Notebook
-[pred_telemarketing_product_acquisition_success](pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
+[pred_telemarketing_product_acquisition_success.ipynb](pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
   
 
 ---
@@ -121,9 +161,9 @@ A partir de uma [base de reviews de artigos (UCI)](https://archive.ics.uci.edu/d
 
 ### Notebooks
 
--  [prepare_data](./analyse_reviews_multi_agents/01.prepare-data.ipynb)
+-  [prepare_data.ipynb](./analyse_reviews_multi_agents/01.prepare-data.ipynb)
 
--  [create-paper-review-agent](./analyse_reviews_multi_agents/02.create-paper-review-agent.ipynb)
+-  [create-paper-review-agent.ipynb](./analyse_reviews_multi_agents/02.create-paper-review-agent.ipynb)
 
 
 
@@ -153,9 +193,9 @@ Neste lab testamos a extração de conteúdo de texto via OCR de uma imagem de c
 - Realiza sessão de perguntas e respostas sobre o cardápio fornecido.
 
 ### Notebooks
--  [read_menu](./local_rag_qa_menu/01.read_menu.ipynb)
+-  [read_menu.ipynb](./local_rag_qa_menu/01.read_menu.ipynb)
 
--  [rag_qa_menu](./local_rag_qa_menu/02.rag_qa_menu.ipynb)
+-  [rag_qa_menu.ipynb](./local_rag_qa_menu/02.rag_qa_menu.ipynb)
 
 
 <br/>
