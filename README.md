@@ -2,7 +2,7 @@
 
 ## Usando RAG local para análise de um artigo científico
 
-Construímos um sistema RAG que é capaz de responder perguntas sobre um artigo científico. Para esta tarefa, inicialmente extraímos o conteúdo das páginas em PDF do artigo.Em seguida, utilizando modelos disponibilizados pela Hugging Face, preparamos o dataset e usamos um modelo LLM local que limita suas respostas ao contexto fornecido.
+Construímos um sistema RAG que é capaz de responder perguntas sobre um artigo científico. Para esta tarefa, inicialmente extraímos o conteúdo das páginas em PDF do artigo. Em seguida, utilizando modelos disponibilizados pela Hugging Face, preparamos o dataset e usamos um modelo LLM local que limita suas respostas ao contexto fornecido.
 
 <br/>
 
