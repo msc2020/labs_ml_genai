@@ -1,5 +1,43 @@
 # Labs
 
+## Usando RAG local para análise de um artigo científico
+
+Construímos um sistema RAG que é capaz de responder perguntas sobre um artigo científico. Para esta tarefa, inicialmente extraímos o conteúdo das páginas em PDF do artigo.Em seguida, utilizando modelos disponibilizados pela Hugging Face, preparamos o dataset e usamos um modelo LLM local que limita suas respostas ao contexto fornecido.
+
+<br/>
+
+<img src="./local_rag_pdf_article/imgs/rag_pdf_article.gif">
+
+<br/>
+
+### Conteúdo
+
+- Extrai informações de PDFs correspondentes as páginas do artigo
+
+- Prepara dataset para base vetorial FAISS
+  
+- Constrói RAG especialista no artigo científico usado como input
+
+- Realiza testes
+
+### Dataset
+  - **Artigo (PDF):** [Acemoglu, D., Ozdaglar, A., & Siderius, J. (2024). _A model of online misinformation. Review of Economic Studies_, 91(6), 3117-3150](https://www.nber.org/system/files/working_papers/w28884/w28884.pdf)
+
+
+### Notebooks
+
+  - [01.extract_data.ipynb](./local_rag_pdf_article/notebooks/01.extract_data.ipynb)
+
+  - [02.create_vector_index.ipynb](./local_rag_pdf_article/notebooks/02.create_vector_index.ipynb)
+
+  - [03.rag_articles.ipynb](./local_rag_pdf_article/notebooks/03.rag_articles.ipynb)
+
+<br/>
+
+---
+
+<br/>
+
 ## Melhorias na modelagem para predição de sucesso em uma campanha de telemarketing
 
 A partir do uso de diferentes técnicas de ML, buscamos melhorar as métricas de performance obtidas para a tarefa de classificar se um cliente realizará um depósito, após um contato de telemarketing. Usamos LLM para analisar os resultados.
