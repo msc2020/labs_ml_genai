@@ -29,7 +29,7 @@ Preparamos um dataset contendo posts no Twitter com diálogos de atendimento ao 
 
 ### Notebooks
 
-  - [01.prepare-dataset.ipynb](./twitter_dialog_summarizer/01.prepare_dataset.ipynb)
+  - [01.prepare_dataset.ipynb](./twitter_dialog_summarizer/01.prepare_dataset.ipynb)
 
   - [02.eval_dataset.ipynb](./twitter_dialog_summarizer/02.eval_dataset.ipynb)
 
