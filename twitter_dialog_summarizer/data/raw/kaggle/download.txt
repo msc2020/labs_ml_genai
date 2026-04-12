@@ -1,0 +1,5 @@
+- https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
+	- twcs.csv (516.6MB)
+
+- https://github.com/guyfe/Tweetsumm
+	- final_train_tweetsum.jsonl (1.9MB)

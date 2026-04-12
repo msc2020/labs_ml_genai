@@ -1,5 +1,48 @@
 # Labs
 
+## Sumarização e avaliação de desempenho de diálogos de atendimento ao cliente pelo Twitter
+
+Preparamos um dataset contendo posts no Twitter com diálogos de atendimento ao cliente, incluindo uma sumarização abstrativa humana. Aplicamos três modelos de IA generativa para tarefa de sumarização do diálogo. Comparamos dois modelos especializados na tarefa de sumarização ([T5](https://huggingface.co/google-t5/t5-small) e [Falconsai](https://huggingface.co/Falconsai/text_summarization)) e um não especializado nesta tarefa. A performance dos modelos foi medida com a métrica [ROUGE](https://en.wikipedia.org/wiki/ROUGE_(metric)), que em linhas gerais mensura à sobreposição de n-gramas entre o texto da sumarização gerada pelos modelos de IA e a sumarização gerada por um humano (ground truth).
+
+<br/>
+
+<img src="./twitter_dialog_summarizer/imgs/rouge_metrics.png">
+
+<br/>
+
+### Conteúdo
+
+- Constrói dataset contendo diálogos de atendimento ao cliente pelo Twitter e sumarização humana.
+
+- Aplica modelos disponilizados na Hugging Face para sumarização dos diálogos.
+  
+- Calcula métrica ROUGE para cada um dos modelos e compara resultados.
+
+
+### Dataset
+  - https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
+  	- `twcs.csv` (516.6MB)
+
+  - https://github.com/guyfe/Tweetsumm
+  	- `final_train_tweetsum.jsonl` (1.9MB)
+
+
+### Notebooks
+
+  - [01.prepare-dataset.ipynb](./twitter_dialog_summarizer/01.prepare_dataset.ipynb)
+
+  - [02.eval_dataset.ipynb](./twitter_dialog_summarizer/02.eval_dataset.ipynb)
+
+  - [03.compare_results.ipynb](./twitter_dialog_summarizer/03.compare_results.ipynb)
+
+<br/>
+
+---
+
+<br/>
+
+
+
 ## Usando RAG local para análise de um artigo científico
 
 Construímos um sistema RAG que é capaz de responder perguntas sobre um artigo científico. Para esta tarefa, inicialmente extraímos o conteúdo das páginas em PDF do artigo. Em seguida, utilizando modelos disponibilizados pela Hugging Face, preparamos o dataset e usamos um modelo LLM local que limita suas respostas ao contexto fornecido.
@@ -12,13 +55,13 @@ Construímos um sistema RAG que é capaz de responder perguntas sobre um artigo 
 
 ### Conteúdo
 
-- Extrai informações de PDFs correspondentes as páginas do artigo
+- Extrai informações de PDFs correspondentes as páginas do artigo.
 
-- Prepara dataset para base vetorial FAISS
+- Prepara dataset para base vetorial FAISS.
   
-- Constrói RAG especialista no artigo científico usado como input
+- Constrói RAG especialista no artigo científico usado como input.
 
-- Realiza testes
+- Realiza testes.
 
 ### Dataset
   - **Artigo (PDF):** [Acemoglu, D., Ozdaglar, A., & Siderius, J. (2024). _A model of online misinformation. Review of Economic Studies_, 91(6), 3117-3150](https://www.nber.org/system/files/working_papers/w28884/w28884.pdf)
