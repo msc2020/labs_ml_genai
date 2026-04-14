@@ -22,17 +22,17 @@ Após o fine-tuning, criamos uma app local simples com o [Gradio](https://www.gr
 
 ### Conteúdo
 
-- Prepara de datasets de treino, validação e teste unindo diálogos no Twitter referentes ao atendimento de clientes e uma sumarização humana do diálogo.
+- Prepara datasets de treino, validação e teste, unindo diálogos no Twitter referentes ao atendimento de clientes e uma sumarização humana deste diálogo.
 
-- Aplica de modelos de sumarização (sem fine-tuning) aos diálogos dos datasets pré-processados e avalia a performance com a métrica ROUGE.
+- Aplica modelos de sumarização (sem fine-tuning) aos diálogos dos datasets pré-processados e avalia a performance com a métrica ROUGE.
 
-- De forma local, realiza o fine-tuning de modelos disponibilizados na Hugging Face.
+- De forma local, realiza o fine-tuning de modelos disponibilizados na Hugging Face para sumarização.
 
 - Compara performance do modelo "tunado" com a versão padrão.
 
-- Cria aplicação com Gradio, disponibilizado o modelo "tunado" para tarefa de sumarização via navegador web.
+- Cria aplicação com Gradio, disponibilizando o modelo "tunado" para tarefa de sumarização via navegador web.
 
-- Testa aplicação no localhost.
+- Testa o app sumarizador via localhost.
 
 
 ### Dataset
