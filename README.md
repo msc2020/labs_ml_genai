@@ -7,8 +7,8 @@ A fim de buscar melhorar a performance em tarefas de sumarização do dataset co
 
 | model                        | rouge1   | rouge2   |  rougeL  | rougeLsum |
 |------------------------------|---------:|---------:|---------:|----------:|
-| **Falconsai/text_summarization "tunado"** | **<span style="color:orange">0.463478</span>** | 0.239363 | 0.391873 | 0.391907  |
-| **Falconsai/text_summarization (original)** | **<span style="color:blue">0.285095</span>**| 0.125963 | 0.233731 | 0.233686  |
+| **Falconsai/text_summarization "tunado"** | **<span style="color:orange">0.407386</span>** | 0.180734 | 0.337834 | 0.337445  |
+| **Falconsai/text_summarization (original)** | **<span style="color:blue">0.263383</span>**| 0.10831 | 0.215001 | 0.213951  |
 
 <br/>
 
