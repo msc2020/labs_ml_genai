@@ -20,7 +20,7 @@ Após o fine-tuning, criamos uma app local simples com o [Gradio](https://www.gr
 
 <br/>
 
-### Conteúdo
+<details><summary><strong>Conteúdo</strong></summary>
 
 - Prepara datasets de treino, validação e teste, unindo diálogos no Twitter referentes ao atendimento de clientes e uma sumarização humana deste diálogo.
 
@@ -34,33 +34,41 @@ Após o fine-tuning, criamos uma app local simples com o [Gradio](https://www.gr
 
 - Testa o app sumarizador via localhost.
 
+</details>
 
-### Dataset
+<br/>
 
-  - https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
-  	- twcs.csv (516.6 MB)
+<details><summary><strong>Datasets</strong></summary>
 
-  - https://github.com/guyfe/Tweetsumm
-  	- final_train_tweetsum.jsonl (1.9 MB)
-  	- final_valid_tweetsum.jsonl (246.6 kB)
-  	- final_test_tweetsum.jsonl (249.3 kB)
+- https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
+  - twcs.csv (516.6 MB)
 
-### Notebooks
+- https://github.com/guyfe/Tweetsumm
+  - final_train_tweetsum.jsonl (1.9 MB)
+  - final_valid_tweetsum.jsonl (246.6 kB)
+  - final_test_tweetsum.jsonl (249.3 kB)
+  
+</details>
 
-  - [01.prepare_data.ipynb](./fine_tuning_summarizer/notebooks/01.prepare_data.ipynb)
+<br/>
 
-  - [02.eval_data.ipynb](./fine_tuning_summarizer/notebooks/02.eval_data.ipynb)
+<details><summary><strong>Notebooks</strong></summary>
 
-  - [03.fine_tuning.ipynb](./fine_tuning_summarizer/notebooks/03.fine_tuning.ipynb)
+- [01.prepare_data.ipynb](./fine_tuning_summarizer/notebooks/01.prepare_data.ipynb)
 
-  - [04.gradio_app.ipynb](./fine_tuning_summarizer/notebooks/04.gradio_app.ipynb)
+- [02.eval_data.ipynb](./fine_tuning_summarizer/notebooks/02.eval_data.ipynb)
+
+- [03.fine_tuning.ipynb](./fine_tuning_summarizer/notebooks/03.fine_tuning.ipynb)
+
+- [04.gradio_app.ipynb](./fine_tuning_summarizer/notebooks/04.gradio_app.ipynb)
+
+</details>
 
 <br/>
 
 ---
 
 <br/>
-
 
 
 
@@ -74,30 +82,38 @@ Preparamos um dataset contendo posts no Twitter com diálogos de atendimento ao 
 
 <br/>
 
-### Conteúdo
+<details><summary><strong>Conteúdo</strong></summary>
 
 - Constrói dataset contendo diálogos de atendimento ao cliente pelo Twitter e sumarização humana.
 
 - Aplica modelos disponilizados na Hugging Face para sumarização dos diálogos.
   
 - Calcula métrica ROUGE para cada um dos modelos e compara resultados.
+</details>
+
+<br/>
+
+<details><summary><strong>Datasets</strong></summary>
+
+- https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
+  - `twcs.csv` (516.6MB)
+
+- https://github.com/guyfe/Tweetsumm
+  - `final_train_tweetsum.jsonl` (1.9MB)
+</details>
+
+<br/>
 
 
-### Dataset
-  - https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
-  	- `twcs.csv` (516.6MB)
+<details><summary><strong>Notebooks</strong></summary>
 
-  - https://github.com/guyfe/Tweetsumm
-  	- `final_train_tweetsum.jsonl` (1.9MB)
+- [01.prepare_dataset.ipynb](./twitter_dialog_summarizer/01.prepare_dataset.ipynb)
 
+- [02.eval_dataset.ipynb](./twitter_dialog_summarizer/02.eval_dataset.ipynb)
 
-### Notebooks
+- [03.compare_results.ipynb](./twitter_dialog_summarizer/03.compare_results.ipynb)
 
-  - [01.prepare_dataset.ipynb](./twitter_dialog_summarizer/01.prepare_dataset.ipynb)
-
-  - [02.eval_dataset.ipynb](./twitter_dialog_summarizer/02.eval_dataset.ipynb)
-
-  - [03.compare_results.ipynb](./twitter_dialog_summarizer/03.compare_results.ipynb)
+</details>
 
 <br/>
 
@@ -117,7 +133,7 @@ Construímos um sistema RAG que é capaz de responder perguntas sobre um artigo 
 
 <br/>
 
-### Conteúdo
+<details><summary><strong>Conteúdo</strong></summary>
 
 - Extrai informações de PDFs correspondentes as páginas do artigo.
 
@@ -126,18 +142,27 @@ Construímos um sistema RAG que é capaz de responder perguntas sobre um artigo 
 - Constrói RAG especialista no artigo científico usado como input.
 
 - Realiza testes.
+</details>
 
-### Dataset
-  - **Artigo (PDF):** [Acemoglu, D., Ozdaglar, A., & Siderius, J. (2024). _A model of online misinformation. Review of Economic Studies_, 91(6), 3117-3150](https://www.nber.org/system/files/working_papers/w28884/w28884.pdf)
+<br/>
+
+<details><summary><strong>Dataset</strong></summary>
+
+- **Artigo (PDF):** [Acemoglu, D., Ozdaglar, A., & Siderius, J. (2024). _A model of online misinformation. Review of Economic Studies_, 91(6), 3117-3150](https://www.nber.org/system/files/working_papers/w28884/w28884.pdf)
+
+</details>
+
+<br/>
 
 
-### Notebooks
+<details><summary><strong>Notebooks</strong></summary>
 
-  - [01.extract_data.ipynb](./local_rag_pdf_article/notebooks/01.extract_data.ipynb)
+- [01.extract_data.ipynb](./local_rag_pdf_article/notebooks/01.extract_data.ipynb)
 
-  - [02.create_vector_index.ipynb](./local_rag_pdf_article/notebooks/02.create_vector_index.ipynb)
+- [02.create_vector_index.ipynb](./local_rag_pdf_article/notebooks/02.create_vector_index.ipynb)
 
-  - [03.rag_articles.ipynb](./local_rag_pdf_article/notebooks/03.rag_articles.ipynb)
+- [03.rag_articles.ipynb](./local_rag_pdf_article/notebooks/03.rag_articles.ipynb)
+</details>
 
 <br/>
 
@@ -155,7 +180,7 @@ A partir do uso de diferentes técnicas de ML, buscamos melhorar as métricas de
 
 <br/>
 
-### Conteúdo
+<details><summary><strong>Conteúdo</strong></summary>
 
 - Construção de um modelo baseline utilizando AutoML.
 
@@ -167,16 +192,33 @@ A partir do uso de diferentes técnicas de ML, buscamos melhorar as métricas de
 
 - Explicação dos resultados de performance com ajuda de um LLM.
 
-### Dataset
-[Bank Marketing (UCI)](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+</details>
 
-### Notebook
-[improve_pred_telemarketing_success.ipynb](./improve_pred_telemarketing_success/improve_pred_telemarketing_success.ipynb)
+<br/>
 
-  
-### Modelagem anterior 
-[Modelagem com auto ML e LLM para predição de sucesso em campanha de telemarketing](https://github.com/msc2020/labs_ml_genai/blob/main/pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
+<details><summary><strong>Dataset</strong></summary>
 
+- [Bank Marketing (UCI)](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+
+
+</details>
+
+<br/>
+
+
+<details><summary><strong>Notebook</strong></summary>
+
+- [improve_pred_telemarketing_success.ipynb](./improve_pred_telemarketing_success/improve_pred_telemarketing_success.ipynb)
+
+</details>
+
+<br/>
+
+<details><summary><strong>Modelagem anterior </strong></summary>
+
+- [Modelagem com auto ML e LLM para predição de sucesso em campanha de telemarketing](https://github.com/msc2020/labs_ml_genai/blob/main/pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
+
+</details>
 
 <br/>
 
@@ -201,7 +243,9 @@ Será que o modelo LLM usado nos testes, após levar em conta argumentos persuas
 
 <img src="./llm_persuasive_arguments/imgs/rating_changes_graph_human.png">
 
-### Conteúdo
+<br />
+
+<details><summary><strong>Conteúdo</strong></summary>
 
 - Checa algumas informações sobre o dataset [`Anthropic/persuasion`](https://huggingface.co/datasets/Anthropic/persuasion), seguindo o artigo: ["Measuring the Persuasiveness of Language Models"](https://www.anthropic.com/news/measuring-model-persuasiveness).
   
@@ -209,13 +253,13 @@ Será que o modelo LLM usado nos testes, após levar em conta argumentos persuas
 
 - Prepara dataset para testes considerando os argumentos persuasivos gerados pelo modelo `Claude 3 Opus` de acordo com os seguintes tipos de prompt, descritos no artigo:
 
-    - `Compelling Case` (**convincente**): o modelo gera um argumento convincente, buscando convencer alguém em cima do muro.
+  - `Compelling Case` (**convincente**): o modelo gera um argumento convincente, buscando convencer alguém em cima do muro.
 
-    - `Logical Reasoning` (**lógico**): o modelo elabora argumentos usando raciocínio lógico, tentando trazer clareza e transparência nos seus argumentos.
+  - `Logical Reasoning` (**lógico**): o modelo elabora argumentos usando raciocínio lógico, tentando trazer clareza e transparência nos seus argumentos.
 
-    - `Expert Writer Rhetorics` (**retórico**): o modelo cria argumentos persuasivos como um especialista em retórica, utilizando-se de _pathos_ (apelo às emoções do leitor; por ex., contar uma história emocionante para gerar empatia), _logos_ (apelo à lógica e razão; por ex., apresentar estatísticas na argumentação) e _ethos_ (apelo à credibilidade ou autoridade; por ex., citar especialistas numa certa área).
+  - `Expert Writer Rhetorics` (**retórico**): o modelo cria argumentos persuasivos como um especialista em retórica, utilizando-se de _pathos_ (apelo às emoções do leitor; por ex., contar uma história emocionante para gerar empatia), _logos_ (apelo à lógica e razão; por ex., apresentar estatísticas na argumentação) e _ethos_ (apelo à credibilidade ou autoridade; por ex., citar especialistas numa certa área).
 
-    - `Deceptive` (**falacioso**):  o modelo formula argumentos que parecem verossímeis, mas são amparados por fatos e fontes inventadas, de forma que o argumento criado seja o mais convincente possível.
+  - `Deceptive` (**falacioso**):  o modelo formula argumentos que parecem verossímeis, mas são amparados por fatos e fontes inventadas, de forma que o argumento criado seja o mais convincente possível.
 
 - Roda localmente um modelo LLM disponibilizado na Hugging Face para classificar as alegações humanas _com_ e _sem_ a presença dos argumentos persuasivos.
 
@@ -237,11 +281,18 @@ Será que o modelo LLM usado nos testes, após levar em conta argumentos persuas
   
 - Gera gráficos para análise dos resultados
 
-### Notebooks
+</details>
+
+<br/>
+
+<details><summary><strong>Notebooks</strong></summary>
+
 - [prepare_dataset.ipynb](./llm_persuasive_arguments/01.prepare_dataset.ipynb)
 - [initial_tests_eval.ipynb](./llm_persuasive_arguments/02.initial_tests_eval.ipynb)
 - [eval_sample_dataset.ipynb](./llm_persuasive_arguments/03.eval_sample_dataset.ipynb)
 - [eval_input_dataset.ipynb](./llm_persuasive_arguments/04.eval_input_dataset.ipynb)
+
+</details>
 
 <br/>
 
@@ -261,24 +312,39 @@ Classificar se um cliente irá (ou não) realizar um depósito, levando em conta
 
 <img src="./pred_telemarketing_success/imgs/metrics_llm.png" size="70%">
 
-### Conteúdo
+<br />
 
-  - Uso de auto ML para análise exploratória (EDA) e treinamento de modelos de machine learning.
-  
-  - Análise de correlação de features; geração de gráficos e visualizações para EDA.
-  
-  - Geração de relatórios automatizados em html, contendo informações sobre a qualidade do dataset de treino.
+<details><summary><strong>Conteúdo</strong></summary>
 
-  - Cálculo de métricas de performance para o modelo ótimo.
+- Uso de auto ML para análise exploratória (EDA) e treinamento de modelos de machine learning.
 
-  - Uso de LLM para explicar os resultados obtidos.
-  
-### Dataset
-[Bank Marketing (UCI)](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+- Análise de correlação de features; geração de gráficos e visualizações para EDA.
 
-### Notebook
-[pred_telemarketing_product_acquisition_success.ipynb](pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
-  
+- Geração de relatórios automatizados em html, contendo informações sobre a qualidade do dataset de treino.
+
+- Cálculo de métricas de performance para o modelo ótimo.
+
+- Uso de LLM para explicar os resultados obtidos.
+
+</details>
+
+<br/>
+
+<details><summary><strong>Dataset</strong></summary>
+
+- [Bank Marketing (UCI)](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+
+</details>
+
+<br/>
+
+<details><summary><strong>Notebook</strong></summary>
+
+- [pred_telemarketing_product_acquisition_success.ipynb](pred_telemarketing_success/pred_telemarketing_product_acquisition_success.ipynb)
+
+</details>
+
+<br/>
 
 ---
 
@@ -292,8 +358,9 @@ A partir de uma [base de reviews de artigos (UCI)](https://archive.ics.uci.edu/d
 
 <img src="./analyse_reviews_multi_agents/imgs/multi_agents_paper_reviews.png" size="60%">
 
+<br/>
 
-### Conteúdo
+<details><summary><strong>Conteúdo</strong></summary>
 
 - Criação de vector store (FAISS) a partir de embbedings calculados com um modelo disponibilizado na Hugging Face.
 
@@ -303,14 +370,19 @@ A partir de uma [base de reviews de artigos (UCI)](https://archive.ics.uci.edu/d
 
 - Implementação de multi-agentes com tools e RAG.
 
+</details>
 
-### Notebooks
+<br/>
+
+<details><summary><strong>Notebooks</strong></summary>
 
 -  [prepare_data.ipynb](./analyse_reviews_multi_agents/01.prepare-data.ipynb)
 
 -  [create-paper-review-agent.ipynb](./analyse_reviews_multi_agents/02.create-paper-review-agent.ipynb)
 
+</details>
 
+<br/>
 
 ---
 
@@ -322,8 +394,9 @@ Neste lab testamos a extração de conteúdo de texto via OCR de uma imagem de c
 
 <img src="./local_rag_qa_menu/imgs/rag_menu.png" size="70%">
 
+<br/>
 
-### Conteúdo
+<details><summary><strong>Conteúdo</strong></summary>
   
 - Usa OCR (Tesseract) para extrair informações de um cardápio na forma de imagem (PNG).
 
@@ -337,10 +410,17 @@ Neste lab testamos a extração de conteúdo de texto via OCR de uma imagem de c
 
 - Realiza sessão de perguntas e respostas sobre o cardápio fornecido.
 
-### Notebooks
+</details>
+
+<br/>
+
+
+<details><summary><strong>Notebooks</strong></summary>
+
 -  [read_menu.ipynb](./local_rag_qa_menu/01.read_menu.ipynb)
 
 -  [rag_qa_menu.ipynb](./local_rag_qa_menu/02.rag_qa_menu.ipynb)
 
+</details>
 
 <br/>
