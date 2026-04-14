@@ -1,5 +1,69 @@
 # Labs
 
+
+## Fine-tuning de modelo para sumarização de diálogos de atendimento ao cliente pelo Twitter
+
+A fim de buscar melhorar a performance em tarefas de sumarização do dataset contendo diálogos de atendimento ao cliente pelo Twitter, realizamos o fine-tuning de forma local de um modelo disponibilizado na Hugging Face.
+
+| model                        | rouge1   | rouge2   |  rougeL  | rougeLsum |
+|------------------------------|---------:|---------:|---------:|----------:|
+| **Falconsai/text_summarization "tunado"** | **<span style="color:orange">0.463478</span>** | 0.239363 | 0.391873 | 0.391907  |
+| **Falconsai/text_summarization (original)** | **<span style="color:blue">0.285095</span>**| 0.125963 | 0.233731 | 0.233686  |
+
+<br/>
+
+Após o fine-tuning, criamos uma app local simples com o [Gradio](https://www.gradio.app/) para facilitar na interação via interface gráfica. Abaixo temos exemplos da sumarização realizada pelo modelo treinado.
+
+<br/>
+
+<img src="./fine_tuning_summarizer/imgs/gradio_app.gif">
+
+<br/>
+
+### Conteúdo
+
+- Prepara de datasets de treino, validação e teste unindo diálogos no Twitter referentes ao atendimento de clientes e uma sumarização humana do diálogo.
+
+- Aplica de modelos de sumarização (sem fine-tuning) aos diálogos dos datasets pré-processados e avalia a performance com a métrica ROUGE.
+
+- De forma local, realiza o fine-tuning de modelos disponibilizados na Hugging Face.
+
+- Compara performance do modelo "tunado" com a versão padrão.
+
+- Cria aplicação com Gradio, disponibilizado o modelo "tunado" para tarefa de sumarização via navegador web.
+
+- Testa aplicação no localhost.
+
+
+### Dataset
+
+  - https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
+  	- twcs.csv (516.6 MB)
+
+  - https://github.com/guyfe/Tweetsumm
+  	- final_train_tweetsum.jsonl (1.9 MB)
+  	- final_valid_tweetsum.jsonl (246.6 kB)
+  	- final_test_tweetsum.jsonl (249.3 kB)
+
+### Notebooks
+
+  - [01.prepare_data.ipynb](./fine_tuning_summarizer/notebooks/01.prepare_data.ipynb)
+
+  - [02.eval_data.ipynb](./fine_tuning_summarizer/notebooks/02.eval_data.ipynb)
+
+  - [03.fine_tuning.ipynb](./fine_tuning_summarizer/notebooks/03.fine_tuning.ipynb)
+
+  - [04.gradio_app.ipynb](./fine_tuning_summarizer/notebooks/04.gradio_app.ipynb)
+
+<br/>
+
+---
+
+<br/>
+
+
+
+
 ## Sumarização e avaliação de desempenho de diálogos de atendimento ao cliente pelo Twitter
 
 Preparamos um dataset contendo posts no Twitter com diálogos de atendimento ao cliente, incluindo uma sumarização abstrativa humana. Aplicamos três modelos de IA generativa para tarefa de sumarização do diálogo. Comparamos dois modelos especializados na tarefa de sumarização ([T5](https://huggingface.co/google-t5/t5-small) e [Falconsai](https://huggingface.co/Falconsai/text_summarization)) e um não especializado nesta tarefa. A performance dos modelos foi medida com a métrica [ROUGE](https://en.wikipedia.org/wiki/ROUGE_(metric)), que em linhas gerais mensura à sobreposição de n-gramas entre o texto da sumarização gerada pelos modelos de IA e a sumarização gerada por um humano (ground truth).

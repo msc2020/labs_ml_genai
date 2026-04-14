@@ -1,0 +1,30 @@
+falconsai_ft/
+			├── checkpoint-406
+			│   ├── config.json
+			│   ├── generation_config.json
+			│   ├── model.safetensors
+			│   ├── optimizer.pt
+			│   ├── rng_state.pth
+			│   ├── scheduler.pt
+			│   ├── tokenizer_config.json
+			│   ├── tokenizer.json
+			│   ├── trainer_state.json
+			│   └── training_args.bin
+			├── checkpoint-420
+			│   ├── config.json
+			│   ├── generation_config.json
+			│   ├── model.safetensors
+			│   ├── optimizer.pt
+			│   ├── rng_state.pth
+			│   ├── scheduler.pt
+			│   ├── tokenizer_config.json
+			│   ├── tokenizer.json
+			│   ├── trainer_state.json
+			│   └── training_args.bin
+			├── config.json
+			├── generation_config.json
+			├── model.safetensors
+			├── tokenizer_config.json
+			├── tokenizer.json
+			└── training_args.bin
+
